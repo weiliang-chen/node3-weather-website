@@ -11,7 +11,8 @@ const forecast = (latitude, longitude , callback) => {
         } else {
             callback(undefined, {
                 temperature: body.current.temperature,
-                weather: body.current.weather_descriptions[0]
+                weather: body.current.weather_descriptions[0],
+                humidity: body.current.humidity
             })
         }
     })
